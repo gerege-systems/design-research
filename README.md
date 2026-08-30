@@ -53,7 +53,7 @@
 
 ## Хэрэгжүүлэлт
 
-Эдгээр дүрмийг хэрэгжүүлсэн компонентын сан: [`@craftzbay/ui`](https://github.com/craftzbay/craftzbay-ui) — showcase https://components.runestonetechnologies.com. Дүрэм энд, код тэнд; token утгын эх сурвалж `packages/ui/src/styles/theme.css`.
+Эдгээр дүрмийг хэрэгжүүлсэн компонентын сан: [`@craftzbay/ui`](https://github.com/craftzbay/craftzbay-ui) — showcase https://ui.gecore.mn. Дүрэм энд, код тэнд; token утгын эх сурвалж `packages/ui/src/styles/theme.css`.
 
 ## Ашиглах урсгал
 
