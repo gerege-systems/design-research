@@ -10,7 +10,7 @@
 - Том текст (≥24px эсвэл ≥18.7px bold): **≥3:1**
 - UI компонент, icon, input border (non-text): **≥3:1** — тэр элемент суудаг **бүх** фон дээр (`--background`, `--background-muted`, card, sidebar); нэг фон дээр л шалгаад орхихгүй.
 - Disabled төлөв contrast шаардлагаас чөлөөлөгддөг — гэхдээ уншигдахуйц байлга.
-- Шалгах: WCAG ratio — Chrome DevTools color picker, axe DevTools; APCA (нэмэлт, WCAG 3 draft) — apcacontrast.com эсвэл `apca-w3` npm (`import { APCAcontrast, sRGBtoY } from 'apca-w3'`) — token бүрийг CI-д lint хийх (13-checklist.md).
+- Шалгах: WCAG ratio — Chrome DevTools color picker, axe DevTools; APCA (нэмэлт, WCAG 3 draft) — apcacontrast.com эсвэл `apca-w3` npm (`import { APCAcontrast, sRGBtoY } from 'apca-w3'`) — token бүрийг CI-д lint хийх (15-checklist.md).
 
 ## Zoom ба хэмжээ
 

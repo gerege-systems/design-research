@@ -17,7 +17,7 @@ Accent-ийн **зөвшөөрөх / хориглох** жагсаалт (нэг
 | Primary товч (view-д 1) | Secondary/tertiary товч, icon button |
 | Линк текст, идэвхтэй nav/tab индикатор | Гарчиг, body текст, label |
 | Focus ring, сонгогдсон checkbox/radio/switch | Card, section, sidebar фон (accent-subtle ч биш) |
-| Progress/loading bar, идэвхтэй chart highlight | Chart series-ийн өнгө (11-data-viz.md), status badge |
+| Progress/loading bar, идэвхтэй chart highlight | Chart series-ийн өнгө (12-data-viz.md), status badge |
 | Notification dot, шинэ зүйлийн badge (жижиг) | Border, divider, shadow, gradient |
 
 Mobile дээр 30%-ийн давхарга (sidebar, panel) багасаж 60% давамгайлдаг — accent-ээ mobile дээр ч 10%-иас хэтрүүлэхгүй, CTA-гаа эрэмбэлэх.

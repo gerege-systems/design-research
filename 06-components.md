@@ -2,14 +2,14 @@
 
 # Компонентын жишиг
 
-Энэ файл компонентын **анатоми** (хэмжээ, төлөв, бүтэц) хариуцна. Dashboard дахь **зан төлөв** (хайлт, pagination, confirmation, keyboard, destructive урсгал) — [10-dashboard-patterns.md](10-dashboard-patterns.md) эзэмшинэ; энд давтахгүй, холбоос л байна. Тоон default-ууд [14-defaults.md](14-defaults.md)-тай ижил.
+Энэ файл компонентын **анатоми** (хэмжээ, төлөв, бүтэц) хариуцна. Dashboard дахь **зан төлөв** (хайлт, pagination, confirmation, keyboard, destructive урсгал) — [11-dashboard-patterns.md](11-dashboard-patterns.md) эзэмшинэ; энд давтахгүй, холбоос л байна. Тоон default-ууд [00-defaults.md](00-defaults.md)-тай ижил.
 
 ## Агуулга
 
 - [Товч](#товч-button) · [Форм](#форм) · [Table](#table-data-нягт-ui) · [Card](#card) · [5 төлөв](#компонентын-5-төлөв)
 - [Modal](#modal--dialog) · [Toast](#toast--notification) · [Tabs](#tabs) · [Dropdown](#dropdown--menu) · [Tooltip vs Popover](#tooltip-vs-popover)
 - [Badge](#badge--status) · [Avatar](#avatar) · [Tag/Chip](#tag--chip) · [Select/Radio/Checkbox](#select-vs-radio-vs-checkbox) · [Date/Time](#date--time) · [File upload](#file-upload)
-- [Search](#search) · [Multi-step форм](#multi-step-форм) · [Onboarding](#onboarding--first-run) · [10-д шилжсэн сэдвүүд](#10-dashboard-patternsmd-д-эзэмшигдсэн-сэдвүүд)
+- [Search](#search) · [Multi-step форм](#multi-step-форм) · [Onboarding](#onboarding--first-run) · [11-д шилжсэн сэдвүүд](#11-dashboard-patternsmd-д-эзэмшигдсэн-сэдвүүд)
 
 ## Товч (Button)
 
@@ -18,7 +18,7 @@
 - Padding: хэвтээ нь босоогоосоо ~2 дахин (md: 8px 16px).
 - Төлөвүүд бүгд байх: default / hover / active / focus-visible / disabled / loading.
 - Loading үед хэмжээ өөрчлөгдөхгүй — текстийг spinner-ээр солихдоо width хадгал; давхар submit боломжгүй.
-- Destructive үйлдэл (устгах) — улаан, гэхдээ primary улаан товч ганц алхамд шууд устгахгүй (урсгал: 10-dashboard-patterns.md → Destructive үйлдэл).
+- Destructive үйлдэл (устгах) — улаан, гэхдээ primary улаан товч ганц алхамд шууд устгахгүй (урсгал: 11-dashboard-patterns.md → Destructive үйлдэл).
 - Icon-only товч: 36×36 (md), icon 16px, заавал `aria-label` + tooltip.
 
 ## Форм
@@ -44,7 +44,7 @@
 | Сервер алдаа (409 давхардал г.м.) | Холбогдох талбарын доор; талбаргүй бол формын дээд хэсэгт |
 
 - Алдаа **талбарын доор, `--danger-foreground` текст + icon**, `aria-describedby`-гаар холбогдсон, `aria-invalid="true"`.
-- Алдааны өгүүлбэрийн томьёо: юу буруу + яаж засах («Имэйл хаяг `@` агуулах ёстой») — 16-ux-writing-mn.md.
+- Алдааны өгүүлбэрийн томьёо: юу буруу + яаж засах («Имэйл хаяг `@` агуулах ёстой») — 10-ux-writing-mn.md.
 - Амжилт төлөв талбар бүрт биш — зөвхөн нууц үгийн хүч, username available мэт async шалгалтад (✓ + текст).
 
 ### Input төрөл / inputmode матриц
@@ -68,7 +68,7 @@
 - **OTP**: нэг `<input inputmode="numeric" autocomplete="one-time-code" maxlength="6">` давуу (paste, SMS autofill ажиллана); 6 тусдаа нүд хийвэл paste-ийг бүгдэд тараах логик заавал, Backspace өмнөх нүд рүү. Дахин илгээх товч 30–60с countdown-тэй, хугацаа `aria-live="polite"`.
 - **Mask** (утас, карт, регистр): бичих явцад форматла, гэхдээ хадгалах утга цэвэр (`+976XXXXXXXX`); курсорын байрлалыг хадгал; placeholder-д жишээ формат (`УБ12345678`). Mask-аар paste-ийг бүү хааж.
 - **Тэмдэгтийн тоолуур**: `max-length` байгаа talbarт «120/280» баруун доор, 90%-д muted → warning, хэтэрвэл danger + submit хориглоно; `aria-live="polite"` (хэтэрсэн үед л зарлана, үсэг бүрт биш). Хатуу `maxlength` attribute-аар тасалж бичүүлэхгүй — paste-д утга алдагдана.
-- **Autosave** (draft): 1–2с debounce, хадгалсан/хадгалж байна төлөв формын доод/дээд нэг газар inline («Хадгалагдлаа · 14:32»), toast биш; алдвал retry товчтой inline error; localStorage-д draft хадгалах бол хуудас ачаалахад «Үргэлжлүүлэх» санал. Autosave-тэй форм дээр «Хадгалах» товч байхгүй (хоёр горим хольдоггүй — 10-dashboard-patterns.md → Settings).
+- **Autosave** (draft): 1–2с debounce, хадгалсан/хадгалж байна төлөв формын доод/дээд нэг газар inline («Хадгалагдлаа · 14:32»), toast биш; алдвал retry товчтой inline error; localStorage-д draft хадгалах бол хуудас ачаалахад «Үргэлжлүүлэх» санал. Autosave-тэй форм дээр «Хадгалах» товч байхгүй (хоёр горим хольдоггүй — 11-dashboard-patterns.md → Settings).
 - **Disabled vs read-only**: *disabled* = энэ контекстэд ажиллахгүй (эрхгүй, урьдчилсан нөхцөл дутуу) — яагаад гэдгийг tooltip/helper-ээр; фокус авахгүй, form-д илгээгдэхгүй. *read-only* = утга мэдээлэл, засахгүй — фокус авна, copy хийгдэнэ, `readonly` attribute, харагдац text шиг (border-гүй/бүдэг). Зөвхөн харуулах зорилгоор disabled хэрэглэхгүй (contrast унаж уншигдахгүй).
 - **Select vs radio vs checkbox** — доорх тусдаа хэсэг.
 
@@ -80,7 +80,7 @@
 - Header: 12–13px, 500 weight, muted өнгө; uppercase бол `letter-spacing: 0.06em` (кирилл), ерөнхийдөө sentence case.
 - Урт table-д sticky header; mobile-д хэвтээ scroll (`overflow-x: auto`) эсвэл card болгон эвхэх.
 - Хоосон нүд: `—` (em dash), 0 болон хоосныг ялга.
-- Sort / filter / selection / pagination / row action зан төлөв → 10-dashboard-patterns.md → Table.
+- Sort / filter / selection / pagination / row action зан төлөв → 11-dashboard-patterns.md → Table.
 
 ## Card
 
@@ -95,17 +95,17 @@
 
 | Төлөв | Дүрэм |
 |---|---|
-| **loading** | Layout-тай ижил хэлбэрийн skeleton; 300ms хойшлуулж, гарсан бол ≥500ms (10-dashboard-patterns.md → Feedback) |
-| **empty** | Хоёр дэд төрөл: *first-run* (юу болох + primary CTA) ба *filtered* (шүүлтүүрийн үр дүн 0 → «Цэвэрлэх»); хүснэгт 10-dashboard-patterns.md → Хоосон төлөв |
+| **loading** | Layout-тай ижил хэлбэрийн skeleton; 300ms хойшлуулж, гарсан бол ≥500ms (11-dashboard-patterns.md → Feedback) |
+| **empty** | Хоёр дэд төрөл: *first-run* (юу болох + primary CTA) ба *filtered* (шүүлтүүрийн үр дүн 0 → «Цэвэрлэх»); хүснэгт 11-dashboard-patterns.md → Хоосон төлөв |
 | **error** | Юу болсон + юу хийх (retry товч); техник код хэрэглэгчид ил гаргахгүй |
 | **success** | Бодит контент; optimistic UI зөвхөн хурдан, буцаагдах үйлдэлд |
-| **permission-denied** | Хоосон хуудас биш: «эрх хүрэхгүй» + хэн өгөх + хүсэлт/буцах зам; нуух/disable/тайлбарлах дүрэм 10-dashboard-patterns.md |
+| **permission-denied** | Хоосон хуудас биш: «эрх хүрэхгүй» + хэн өгөх + хүсэлт/буцах зам; нуух/disable/тайлбарлах дүрэм 11-dashboard-patterns.md |
 
 ## Modal / Dialog
 
 - Өргөн: alert 400px / форм 480–560px / том контент 720px+. Full-screen нь mobile-д.
 - Focus trap + Esc хаана + overlay дарахад хаагдана (форм бөглөж байсан бол баталгаажуул); хаагдахад фокус trigger рүү буцна.
-- `<dialog>.showModal()` эсвэл `inert` — арын контент screen reader-ээс ч нуугдана. Давхарга/scroll-lock дүрэм 15-app-resilience.md.
+- `<dialog>.showModal()` эсвэл `inert` — арын контент screen reader-ээс ч нуугдана. Давхарга/scroll-lock дүрэм 14-app-resilience.md.
 - Modal доторх modal — дизайны алдааны шинж; nested хэрэгтэй бол flow-гоо эргэнэ хар.
 - Радиус `--radius-xl`, shadow `--shadow-xl`, duration 240ms.
 
@@ -113,7 +113,7 @@
 
 - Байрлал нэг л газар (ихэвчлэн баруун дээд/доод), `--z-toast`.
 - Success 3–5 сек өөрөө алга болно; error нь хэрэглэгч хаатал үлдэнэ; hover дээр timer зогсоно.
-- Үйлдэлтэй toast (Undo): **5с default, bulk destructive-д 10с** — урсгал 10-dashboard-patterns.md → Destructive үйлдэл.
+- Үйлдэлтэй toast (Undo): **5с default, bulk destructive-д 10с** — урсгал 11-dashboard-patterns.md → Destructive үйлдэл.
 - `role="status"` (success) / `role="alert"` (error) live region хуудас ачаалахад DOM-д байх (07-accessibility.md).
 
 ## Tabs
@@ -147,7 +147,7 @@
 | Mobile | байхгүй (hover үгүй) | ажиллана |
 | z-index | `--z-tooltip` 1600 | `--z-popover` 1400 |
 
-- Tooltip нээгдэх хоцрогдол **500ms**, хаагдах 0–100ms; нэг tooltip нээлттэй үед дараагийнх нь хоцрогдолгүй. Chart tooltip ≤150ms (11-data-viz.md).
+- Tooltip нээгдэх хоцрогдол **500ms**, хаагдах 0–100ms; нэг tooltip нээлттэй үед дараагийнх нь хоцрогдолгүй. Chart tooltip ≤150ms (12-data-viz.md).
 - Tooltip-д тавьсан мэдээлэл **зайлшгүй бол болохгүй** — зөвхөн нэмэлт тайлбар; чухал мэдээлэл харагдах текст байна.
 - Icon-only товч бүр tooltip + `aria-label` хоёулантай.
 - Tooltip дотор interactive элемент тавихгүй; хэрэгтэй бол popover.
@@ -229,7 +229,7 @@
 
 ## Search
 
-Анатоми энд; dashboard дахь зан төлөв (debounce, URL, үр дүнгийн тоо, хоосон үр дүн) → 10-dashboard-patterns.md → Search.
+Анатоми энд; dashboard дахь зан төлөв (debounce, URL, үр дүнгийн тоо, хоосон үр дүн) → 11-dashboard-patterns.md → Search.
 
 - `<input type="search">` — native семантик хангалттай, нэмэлт `role` тавихгүй; `<form role="search">` эсвэл `<search>` элемент хүрээлнэ.
 - Icon зүүн, clear `×` баруун (утгатай үед л, hit target 24×24).
@@ -259,9 +259,9 @@
 - Заавал бөглөх зүйлийг бүртгэлийн дараа биш, хэрэглэх мөчид асуу (progressive): төлбөрийн мэдээллийг эхний төлбөрт.
 - «Шинэ» badge нь 7–14 хоног л, дараа нь алга болно.
 
-## 10-dashboard-patterns.md-д эзэмшигдсэн сэдвүүд
+## 11-dashboard-patterns.md-д эзэмшигдсэн сэдвүүд
 
-Дараах сэдвүүд өмнө нь энд давхардаж байсан; одоо **зөвхөн** [10-dashboard-patterns.md](10-dashboard-patterns.md)-д:
+Дараах сэдвүүд өмнө нь энд давхардаж байсан; одоо **зөвхөн** [11-dashboard-patterns.md](11-dashboard-patterns.md)-д:
 
 - Confirmation хэв маяг (Undo toast / modal confirm / type-to-confirm) → «Destructive үйлдэл ба баталгаажуулалт»
 - Pagination (offset / cursor / infinite, page size, URL) → «Pagination»

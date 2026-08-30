@@ -18,7 +18,7 @@
 
 - **Sidebar ≤1024px-д drawer болно** (overlay + focus trap + Esc); 1024–1280px-д хумьсан горимоор эхлүүл.
 - Доод хэсэг (settings/profile) `position: sticky; bottom: 0`; sidebar фон `--background-subtle` (content-оос нэг шат).
-- Mobile bottom tab bar, PWA — 15-app-resilience.md.
+- Mobile bottom tab bar, PWA — 14-app-resilience.md.
 
 ## Тохиргоо хаана хадгалагдах
 
@@ -37,13 +37,13 @@
 - Active төлөв = **accent bar (зүүн талд 2–3px) + font-weight 500 + `--accent-subtle` background** — зөвхөн өнгөөр тэмдэглэхгүй (07-accessibility.md, WCAG 1.4.1); `aria-current="page"`.
 - Гүн ≥3 (Захиалга → #1042 → Засах) бол **breadcrumbs** заавал; 2 түвшинд «← Буцах» хангалттай. Сүүлийн элемент линк биш. Хуудас доторх tab `h1`-ийн доор, URL-тай.
 - Хуудас бүр: **`h1` = хуудасны нэр (зүүн), primary action = баруун дээд**, нэг мөрөнд. Primary товч нэг л байна.
-- SPA route солигдоход `<title>`, фокус, screen reader зарлал — 15-app-resilience.md.
+- SPA route солигдоход `<title>`, фокус, screen reader зарлал — 14-app-resilience.md.
 
 ## Хуудасны загварууд
 
 ### Overview (нүүр)
 
-- Дараалал: **KPI мөр → chart → table**. KPI 3–4 ширхэг (6-аас олонгүй); tile-ийн анатоми 11-data-viz.md.
+- Дараалал: **KPI мөр → chart → table**. KPI 3–4 ширхэг (6-аас олонгүй); tile-ийн анатоми 12-data-viz.md.
 - Хугацааны шүүлтүүр (7d/30d/90d) дээд талд нэг газар, бүх widget-д нийтлэг, URL-д; table 5–10 мөр + «Бүгдийг үзэх».
 
 ### List → Detail
@@ -67,7 +67,7 @@
 
 - Нэг багана, card өргөн 400–440px, дэлгэцийн төвд; лого дээр, «Бүртгүүлэх/Нэвтрэх» шилжилт доор.
 - Талбар ≤3 (email, нууц үг, [remember]); SSO товчнууд дээр, `— эсвэл —` divider-тэй. Алдаа «Имэйл эсвэл нууц үг буруу» — аль нь гэдгийг хэлэхгүй. Паст хориглохгүй, password manager ажиллана (WCAG 3.3.8).
-- Session дуусах анхааруулга — 15-app-resilience.md.
+- Session дуусах анхааруулга — 14-app-resilience.md.
 
 ## Density (нягтралын горим)
 
@@ -146,7 +146,7 @@
 
 - **Skeleton-ийг 300ms хойшлуул** (хурдан хариу дээр анивчихгүй); skeleton гарсан бол ≥500ms байлга (флаш хоёр талдаа).
 - **Optimistic UI** зөвхөн: (1) амжилтын магадлал өндөр, (2) буцаах хялбар, (3) хариу ≤1s. Төлбөр, устгах, илгээх — optimistic биш. Алдвал төлөвийг буцааж, **алдааг тухайн элементийн дэргэд** харуул.
-- Stale data, offline, rate-limit — 15-app-resilience.md.
+- Stale data, offline, rate-limit — 14-app-resilience.md.
 
 ## Destructive үйлдэл ба баталгаажуулалт
 
@@ -171,7 +171,7 @@
 |---|---|
 | **Нуух** | Үүрэгт огт хамааралгүй модуль/цэс (кассчинд «Billing settings»); нуугаад хуудсыг хоосон орхихгүй |
 | **Disable + tooltip** | Тухайн контекстэд байх ёстой, гэхдээ одоо хориотой үйлдэл («Зөвхөн админ баталгаажуулна») |
-| **Харуулж тайлбарлах** | Хуудас руу шууд URL-аар орсон: 403 хуудас — хэн зөвшөөрөл өгөхийг + хүсэлт илгээх товч (15-app-resilience.md) |
+| **Харуулж тайлбарлах** | Хуудас руу шууд URL-аар орсон: 403 хуудас — хэн зөвшөөрөл өгөхийг + хүсэлт илгээх товч (14-app-resilience.md) |
 
 Permission-denied нь компонентын 5 төлөвийн нэг (06-components.md) — хоосон хуудас биш.
 
@@ -211,7 +211,7 @@ Permission-denied нь компонентын 5 төлөвийн нэг (06-comp
 8. Tenant нэр ба орчны баннер ил.
 9. `Esc` хаана, `/` хайлт, `Cmd+K` palette, focus-visible ажиллана.
 10. ≤1024px-д sidebar drawer, table эхний багана sticky, action-ууд overflow-д.
-11. Route солигдоход title + focus + announce; offline/session-expiry/stale баннерууд (15-app-resilience.md).
+11. Route солигдоход title + focus + announce; offline/session-expiry/stale баннерууд (14-app-resilience.md).
 
 ## Эх сурвалж
 

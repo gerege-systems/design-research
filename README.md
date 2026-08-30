@@ -1,12 +1,12 @@
 # Design Research
 
-Вэб дизайны нарийн ширийн жишиг, стандарт, практик дүрмүүдийн нэгдсэн тэмдэглэл. Responsive вэбсайт, SaaS/dashboard UI, landing page-д хамаарна. Тоон утга бүр [14-defaults.md](14-defaults.md) ба `craftzbay-ui` theme.css-тэй ижил.
+Вэб дизайны нарийн ширийн жишиг, стандарт, практик дүрмүүдийн нэгдсэн тэмдэглэл. Responsive вэбсайт, SaaS/dashboard UI, landing page-д хамаарна. Тоон утга бүр [00-defaults.md](00-defaults.md) ба `craftzbay-ui` theme.css-тэй ижил.
 
 ## Агуулга
 
 | Файл | Сэдэв |
 |---|---|
-| [00-sources.md](00-sources.md) | Бүх эх сурвалж + давамгайллын дүрэм |
+| [00-defaults.md](00-defaults.md) | **Эхлэх цэг** — муж бүрээс нэг default; бодолгүй хэрэглэх хүснэгт |
 | [01-color.md](01-color.md) | Өнгөний харьцаа — 60-30-10, accent allow/deny, palette, OKLCH, dark mode |
 | [02-typography.md](02-typography.md) | Geist, type scale (1.2@14 / 1.25@16), rem, clamp, шрифт ачаалалт (≤4 woff2) |
 | [03-spacing-layout.md](03-spacing-layout.md) | 4/8 scale, container (1536/720/1280/65ch), breakpoint, `dvh`, container query |
@@ -16,20 +16,20 @@
 | [07-accessibility.md](07-accessibility.md) | WCAG 2.2, contrast бүх фон дээр, focus ring (давхар), pointer target 24/44, APCA |
 | [08-design-tokens.md](08-design-tokens.md) | theme.css-ийн бодит light/dark утгууд, `--text-*--line-height`, `.dark` + pre-paint, DTCG 2025.10 |
 | [09-localization-mn.md](09-localization-mn.md) | Монгол: кирилл шрифт, overflow хүснэгт, огноо `yyyy-MM-dd HH:mm`, `25,000₮`, хэлний хадгалалт |
-| [10-dashboard-patterns.md](10-dashboard-patterns.md) | Dashboard/ERP **зан төлөв**: app shell, prefs хадгалах, table, search, pagination, destructive/Undo, permission, keyboard |
-| [11-data-viz.md](11-data-viz.md) | Chart сонголт, KPI tile, `--chart-1…6`, axis, Recharts/ECharts, a11y |
-| [12-landing.md](12-landing.md) | Landing: hero, section хэмнэл, CTA xl, pricing, SEO, Core Web Vitals |
-| [13-checklist.md](13-checklist.md) | Pre-ship шалгах хуудас + dashboard/chart/landing gate + CI автоматжуулалт |
-| [14-defaults.md](14-defaults.md) | **Эхлэх цэг** — муж бүрээс нэг default; бодолгүй хэрэглэх хүснэгт |
-| [15-app-resilience.md](15-app-resilience.md) | 404/403/500, offline, session, 429, stale, z-index/top-layer/scroll-lock, print, SPA route, bottom bar/PWA |
-| [16-ux-writing-mn.md](16-ux-writing-mn.md) | UX бичвэр монголоор: sentence case, товчны үйл үг, дагавар/ICU plural, алдааны томьёо, нэгж |
+| [10-ux-writing-mn.md](10-ux-writing-mn.md) | UX бичвэр монголоор: sentence case, товчны үйл үг, дагавар/ICU plural, алдааны томьёо, нэгж |
+| [11-dashboard-patterns.md](11-dashboard-patterns.md) | Dashboard/ERP **зан төлөв**: app shell, prefs хадгалах, table, search, pagination, destructive/Undo, permission, keyboard |
+| [12-data-viz.md](12-data-viz.md) | Chart сонголт, KPI tile, `--chart-1…6`, axis, Recharts/ECharts, a11y |
+| [13-landing.md](13-landing.md) | Landing: hero, section хэмнэл, CTA xl, pricing, SEO, Core Web Vitals |
+| [14-app-resilience.md](14-app-resilience.md) | 404/403/500, offline, session, 429, stale, z-index/top-layer/scroll-lock, print, SPA route, bottom bar/PWA |
+| [15-checklist.md](15-checklist.md) | Pre-ship шалгах хуудас + dashboard/chart/landing gate + CI автоматжуулалт |
+| [16-sources.md](16-sources.md) | Бүх эх сурвалж + давамгайллын дүрэм |
 | [references/](references/README.md) | Амтны сан — зорьж буй / зайлсхийх жишиг зургууд |
 
 ## Давамгайлал ба эзэмшил
 
-1. **Pattern файл (10 dashboard, 11 data-viz, 12 landing) өөрийн домэйнд суурь файл (01–08)-ыг дарна.**
+1. **Pattern файл (11 dashboard, 12 data-viz, 13 landing) өөрийн домэйнд суурь файл (01–08)-ыг дарна.**
 2. **Сэдэв бүр нэг л эзэн файлтай**; бусад файл холбоос өгнө, давтахгүй. Компонентын анатоми = 06; dashboard-ын зан төлөв (search, pagination, confirmation, keyboard) = 10; формат (огноо/₮/утас) = 09; бичвэр = 16; token утга = 08.
-3. Тоо зөрвөл: `craftzbay-ui` theme.css = 14-defaults = энэ README > бусад файл. Зөрүү олдвол эзэн файлыг засна.
+3. Тоо зөрвөл: `craftzbay-ui` theme.css = 00-defaults = энэ README > бусад файл. Зөрүү олдвол эзэн файлыг засна.
 
 ## Товч дүрмүүд (cheat sheet)
 
@@ -57,9 +57,9 @@
 
 ## Ашиглах урсгал
 
-1. `14-defaults.md` — утгаа аваад эхэл.
+1. `00-defaults.md` — утгаа аваад эхэл.
 2. `references/` — зорьж буй амтыг зургаар хар.
-3. Хэв маяг: dashboard бол `10`, landing бол `12`, chart бол `11`; апп бүрт `15`.
-4. Суурь дүрэм `01–08` + монгол `09` + бичвэр `16`.
+3. Хэв маяг: dashboard бол `11`, landing бол `13`, chart бол `12`; апп бүрт `14`.
+4. Суурь дүрэм `01–08` + монгол `09` + бичвэр `10`.
 5. Мокап → батлуул → код.
-6. Дуусахын өмнө `13-checklist.md`-ийг бүхэлд нь (хуудасны төрлийн gate-тэй) ажиллуул.
+6. Дуусахын өмнө `15-checklist.md`-ийг бүхэлд нь (хуудасны төрлийн gate-тэй) ажиллуул.

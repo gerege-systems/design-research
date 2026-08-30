@@ -26,7 +26,7 @@
 | Landing / мэдээний сайт container | 1152-1280px |
 | Dashboard content | fluid, дээд тал нь 1536px (table/chart бүтэн өргөн) |
 
-Auth card (400-440px) нь хуудас биш card — 10-dashboard-patterns.md-г үз.
+Auth card (400-440px) нь хуудас биш card — 11-dashboard-patterns.md-г үз.
 
 Хажуугийн padding: mobile 16px, tablet 24px, desktop 32px+.
 

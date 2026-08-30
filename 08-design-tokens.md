@@ -46,7 +46,7 @@ Tailwind utility нэр хаалтад (`@theme inline`-аар холбогдс�
 | `--ring` | `hsl(238 55% 58%)` (accent-500) | `hsl(238 60% 67%)` (accent-400) | Focus ring |
 | `--ring-offset` | `hsl(0 0% 100%)` | `hsl(229 50% 6%)` | Давхар ring-ийн дотоод давхарга |
 | `--selection` / `--selection-foreground` | `hsl(232 100% 94%)` / `hsl(238 48% 40%)` | `hsl(238 43% 32%)` / `hsl(232 100% 97%)` | `::selection` |
-| `--chart-1…6` | `hsl(217 70% 50%)`, `hsl(162 66% 29%)`, `hsl(38 92% 40%)`, `hsl(0 72% 45%)`, `hsl(215 16% 47%)`, `hsl(262 52% 55%)` | `hsl(217 80% 68%)`, `hsl(162 60% 55%)`, `hsl(38 92% 60%)`, `hsl(0 80% 68%)`, `hsl(215 20% 65%)`, `hsl(262 70% 75%)` | Categorical series — chart-1 нь accent **биш** (11-data-viz.md) |
+| `--chart-1…6` | `hsl(217 70% 50%)`, `hsl(162 66% 29%)`, `hsl(38 92% 40%)`, `hsl(0 72% 45%)`, `hsl(215 16% 47%)`, `hsl(262 52% 55%)` | `hsl(217 80% 68%)`, `hsl(162 60% 55%)`, `hsl(38 92% 60%)`, `hsl(0 80% 68%)`, `hsl(215 20% 65%)`, `hsl(262 70% 75%)` | Categorical series — chart-1 нь accent **биш** (12-data-viz.md) |
 
 ### Статусын 4 шаттай мини scale
 
@@ -77,7 +77,7 @@ Utility нэр: `bg-success` (solid) · `text-on-success` · `bg-success-soft` �
 --shadow-xl: 0 24px 48px -12px rgb(0 0 0 / 0.12), 0 8px 16px -8px rgb(0 0 0 / 0.06);
 ```
 
-**Z-index** (зөвхөн token, тоо шууд бичихгүй): `--z-dropdown` 1000 · `--z-sticky` 1100 · `--z-overlay` 1200 · `--z-modal` 1300 · `--z-popover` 1400 · `--z-toast` 1500 · `--z-tooltip` 1600. Давхаргын дараалал, top-layer харилцаа — 15-app-resilience.md.
+**Z-index** (зөвхөн token, тоо шууд бичихгүй): `--z-dropdown` 1000 · `--z-sticky` 1100 · `--z-overlay` 1200 · `--z-modal` 1300 · `--z-popover` 1400 · `--z-toast` 1500 · `--z-tooltip` 1600. Давхаргын дараалал, top-layer харилцаа — 14-app-resilience.md.
 
 **Motion**: `--duration-fast` 120ms · `--duration-base` 160ms · `--duration-slow` 240ms; `--ease-in` `cubic-bezier(0.4,0,1,1)` · `--ease-out` `cubic-bezier(0,0,0.2,1)` · `--ease-in-out` `cubic-bezier(0.4,0,0.2,1)`.
 
@@ -108,7 +108,7 @@ Utility нэр: `bg-success` (solid) · `text-on-success` · `bg-success-soft` �
 ## Theming — `.dark` class + pre-paint script
 
 - Theme = `<html class="dark">` — `@custom-variant dark (&:where(.dark, .dark *))`. `data-theme` attribute, `prefers-color-scheme`-ээр token дарах хувилбар **хэрэглэхгүй** (3 төлөвийг нэг газар шийдэхийн тулд).
-- Гурван төлөв: `light` / `dark` / `system` — `localStorage.theme` (байхгүй = system). Сонголт нь density-той адил төхөөрөмжийн тохиргоо тул localStorage (10-dashboard-patterns.md → Тохиргоо хаана хадгалагдах).
+- Гурван төлөв: `light` / `dark` / `system` — `localStorage.theme` (байхгүй = system). Сонголт нь density-той адил төхөөрөмжийн тохиргоо тул localStorage (11-dashboard-patterns.md → Тохиргоо хаана хадгалагдах).
 - `:root { color-scheme: light } .dark { color-scheme: dark }` — native control, scrollbar дагана.
 - **Pre-paint script** `<head>`-д, stylesheet-ийн дараа, app bundle-аас өмнө; гадаад файл (CSP `unsafe-inline`-гүй):
 
@@ -146,7 +146,7 @@ Raw token `@theme`-д, semantic нь `:root`/`.dark`-д энгийн custom prop
 1. Компонент дотор hex/px шууд бичихгүй — заавал token.
 2. Token нэр нь **юунд** хэрэглэгдэхийг хэлнэ, **ямар өнгө** болохыг биш (`--color-blue` ✗, `--accent` ✓).
 3. Шинэ token нэмэхээсээ өмнө байгаагаа эргэж хар — token-ийн тоо өсөх нь системийн үнэ цэнийг бууруулдаг.
-4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (13-checklist.md → contrast lint).
+4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (15-checklist.md → contrast lint).
 
 ## W3C DTCG формат ба tooling
 

@@ -35,7 +35,7 @@
 
 | Хэрэглээ | Хэмжээ | Тайлбар |
 |---|---|---|
-| Caption, badge, table header | 12px (0.75rem) | **Доод хязгаар** — бүх UI текстэд; ганц үл хамаарах: chart-ийн tick label 11px (11-data-viz.md) |
+| Caption, badge, table header | 12px (0.75rem) | **Доод хязгаар** — бүх UI текстэд; ганц үл хамаарах: chart-ийн tick label 11px (12-data-viz.md) |
 | Secondary/UI text, dashboard body | 13-14px | Data-нягт UI-ийн ажлын морь |
 | Body (контент сайт) | 16-18px | Урт текстэд 16-аас доошгүй |
 | H4 / card title | 16-18px, 600 weight | |

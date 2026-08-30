@@ -4,12 +4,12 @@
 
 ## Яагаад
 
-Дүрмүүд 01–12 файлд (default утга [14-defaults.md](14-defaults.md)-д) бий; энэ нь тэдгээрийг **хуудас/компонент бүр дээр нэг удаа, дараалалтай** давах хуудас. Бүх `[ ]` тэмдэглэгдээгүй бол «дууссан» гэж хэлэхгүй. Claude ч, хүн ч ижил жагсаалтаар явна. Тоо энд 14-defaults.md-тэй зөрвөл 14 зөв.
+Дүрмүүд 01–12 файлд (default утга [00-defaults.md](00-defaults.md)-д) бий; энэ нь тэдгээрийг **хуудас/компонент бүр дээр нэг удаа, дараалалтай** давах хуудас. Бүх `[ ]` тэмдэглэгдээгүй бол «дууссан» гэж хэлэхгүй. Claude ч, хүн ч ижил жагсаалтаар явна. Тоо энд 00-defaults.md-тэй зөрвөл 14 зөв.
 
 ## Төлөвүүд
 
 - [ ] loading / empty (first-run **ба** filtered) / error / success / permission-denied — **5 төлөв** бүгд хэрэгжсэн (06-components.md)
-- [ ] permission-denied нь хоосон хуудас биш — «эрх хүрэхгүй» + хэн өгөх + буцах зам (10-dashboard-patterns.md)
+- [ ] permission-denied нь хоосон хуудас биш — «эрх хүрэхгүй» + хэн өгөх + буцах зам (11-dashboard-patterns.md)
 - [ ] skeleton 300ms хойшлогдож, эцсийн layout-тай ижил хэлбэр, өндөртэй — контент ирэхэд үсрэлт 0
 - [ ] empty state-д юу байхгүй + CTA товч байна; filtered хоосонд header/chip үлдсэн
 - [ ] error төлөвд retry эсвэл дараагийн алхам бий; техник код хэрэглэгчид харагдахгүй
@@ -45,19 +45,19 @@
 - [ ] Fixed header/bottom bar `env(safe-area-inset-*)` тооцсон; өндөрт `dvh`, `h-screen` байхгүй (03, 15)
 - [ ] Container max-width: dashboard fluid ≤1536, форм/settings/текст 720, landing 1152–1280, prose 65ch (03-spacing-layout.md)
 - [ ] Өргөн table/code өөрийн `overflow-x: auto` саванд; grid child `min-width: 0` (03-spacing-layout.md)
-- [ ] `html { scrollbar-gutter: stable }`; overlay нээхэд layout үсрэхгүй (15-app-resilience.md)
+- [ ] `html { scrollbar-gutter: stable }`; overlay нээхэд layout үсрэхгүй (14-app-resilience.md)
 
 ## Компонент
 
 - [ ] **Нэг view-д primary товч 1 л байна**; бусад нь `variant="secondary"` ил (06-components.md)
-- [ ] Товч sm 32 / md 36 / lg 40 / xl 44; table мөр 36/44/52 — scale-ээс гадуур утга байхгүй (14-defaults.md)
+- [ ] Товч sm 32 / md 36 / lg 40 / xl 44; table мөр 36/44/52 — scale-ээс гадуур утга байхгүй (00-defaults.md)
 - [ ] Label талбарын дээр; placeholder label-ийн оронд биш; `type`/`inputmode`/`autocomplete` матрицын дагуу (06-components.md)
 - [ ] Validation: эхний keystroke-д биш, blur-ийн дараа; алдаа талбарын доор, `aria-describedby` + `aria-invalid`; >5 алдаа → error summary (06-components.md)
 - [ ] Тоон багана баруун зэрэгцээ + `tabular-nums`; хоосон нүд `—` (06-components.md)
 - [ ] Truncate хийсэн текст бүрт `title` эсвэл tooltip бий
 - [ ] Icon-only товч бүрт `aria-label` + tooltip; icon хэмжээ текстээ дагасан (04-visual-details.md)
 - [ ] Modal: focus trap, Esc хаана, хаагдахад focus trigger рүү буцна; z-index зөвхөн `--z-*` token (06, 08, 15)
-- [ ] Destructive үйлдэл: Undo 5с (bulk 10с) эсвэл confirm (үйлдлийн нэртэй товч); буцаашгүй бол type-to-confirm (10-dashboard-patterns.md)
+- [ ] Destructive үйлдэл: Undo 5с (bulk 10с) эсвэл confirm (үйлдлийн нэртэй товч); буцаашгүй бол type-to-confirm (11-dashboard-patterns.md)
 - [ ] Tooltip 500ms delay, chart ≤150ms; dropdown ≤8 item (06, 11)
 
 ## Motion
@@ -78,11 +78,11 @@
 
 ## Performance
 
-- [ ] LCP ≤2.5s, INP ≤200ms, CLS ≤0.1 (Lighthouse mobile дээр) (12-landing.md)
+- [ ] LCP ≤2.5s, INP ≤200ms, CLS ≤0.1 (Lighthouse mobile дээр) (13-landing.md)
 - [ ] Зураг бүрт `width/height` эсвэл `aspect-ratio`; fold-ийн доорхи `loading="lazy"` (04-visual-details.md)
 - [ ] Hero/LCP зураг preload + `fetchpriority="high"`, WebP/AVIF + srcset (04, 12)
 - [ ] **Ачаалахад layout shift нүдэнд харагдахгүй — skeleton/aspect-ratio-гоор барьсан**
-- [ ] Chart >1,000 цэгт canvas (ECharts) + LTTB; агрегац серверт (11-data-viz.md)
+- [ ] Chart >1,000 цэгт canvas (ECharts) + LTTB; агрегац серверт (12-data-viz.md)
 
 ## Локалчлал & бичвэр
 
@@ -90,12 +90,12 @@
 - [ ] Огноо `yyyy-MM-dd HH:mm`, UTC+8; долоо хоног Даваагаас; timezone нэг газар тогтоосон (09-localization-mn.md)
 - [ ] Мөнгө `1,250,000₮` (suffix, зайгүй), `tabular-nums`; утас `+976 XXXX XXXX` (09-localization-mn.md)
 - [ ] Хэл: public → URL `/mn/`; апп → сервер + cookie; localStorage-only биш (09-localization-mn.md)
-- [ ] Товчны label үйл үг жагсаалтаас; «OK/Тийм/Submit» байхгүй; sentence case (16-ux-writing-mn.md)
-- [ ] Динамик нэр дагавартай залгагдаагүй; plural ICU `=0`/`other` (16-ux-writing-mn.md)
-- [ ] Алдааны мессеж «юу + яаж засах» — «500 Internal Server Error» биш (16-ux-writing-mn.md)
+- [ ] Товчны label үйл үг жагсаалтаас; «OK/Тийм/Submit» байхгүй; sentence case (10-ux-writing-mn.md)
+- [ ] Динамик нэр дагавартай залгагдаагүй; plural ICU `=0`/`other` (10-ux-writing-mn.md)
+- [ ] Алдааны мессеж «юу + яаж засах» — «500 Internal Server Error» биш (10-ux-writing-mn.md)
 - [ ] Public copy-д дотоод email, staging URL, IP байхгүй; Lorem ipsum/TODO үлдээгүй
 
-## Тэсвэр (15-app-resilience.md)
+## Тэсвэр (14-app-resilience.md)
 
 - [ ] 404 / 403 / 500 / maintenance хуудас бодит, shell зөв; 403-д «эрх хүсэх»
 - [ ] Offline banner, session-expiry modal (2 мин өмнө), 429 countdown, stale «Шинэчлэгдсэн HH:mm»
@@ -104,7 +104,7 @@
 
 ## Хуудасны төрлөөр нэмэлт gate
 
-### Dashboard хуудас (10-dashboard-patterns.md)
+### Dashboard хуудас (11-dashboard-patterns.md)
 
 - [ ] `h1` + primary action нэг мөрөнд; гүн ≥3 бол breadcrumb; sidebar active bar + weight
 - [ ] Шүүлтүүр/сорт/хуудас/tab/`q` URL-д; density/sidebar localStorage-д; refresh, back, share ажиллана
@@ -113,7 +113,7 @@
 - [ ] Unsaved-changes guard; settings хэсэг ≤720px; autosave ба «Хадгалах» хольсонгүй
 - [ ] Tenant нэр + орчны баннер ил; `Esc`/`/`/`Cmd+K` ажиллана; ≤1024 drawer
 
-### Chart / data-viz (11-data-viz.md)
+### Chart / data-viz (12-data-viz.md)
 
 - [ ] Chart бүр нэг асуултад хариулна; pie ≤5 зүсэм; 3D/dual axis/radar/gauge байхгүй
 - [ ] Bar 0-оос; tick ≤6; тоо товчилсон (`1.2K`), ₮ suffix; нэгж тэнхлэгийн гарчигт
@@ -122,7 +122,7 @@
 - [ ] `<figure>` + `aria-label` + хүснэгт хувилбар; tooltip keyboard-оор; mark contrast ≥3:1
 - [ ] 5 төлөв; өгөгдөлгүй = null завсар; partial hatched; өндөр ≥160px, container query
 
-### Landing (12-landing.md)
+### Landing (13-landing.md)
 
 - [ ] h1 нэг, ≤10 үг, үр ашиг; title ≤60, description ≤155; OG 1200×630
 - [ ] Primary CTA нэг label, 3–4 удаа; hero-д ≤2 товч; xl 44px
