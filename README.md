@@ -6,7 +6,7 @@
 
 | Файл | Сэдэв |
 |---|---|
-| [14-defaults.md](14-defaults.md) | **Эхлэх цэг** — муж бүрээс нэг default; бодолгүй хэрэглэх хүснэгт |
+| [00-sources.md](00-sources.md) | Бүх эх сурвалж + давамгайллын дүрэм |
 | [01-color.md](01-color.md) | Өнгөний харьцаа — 60-30-10, accent allow/deny, palette, OKLCH, dark mode |
 | [02-typography.md](02-typography.md) | Geist, type scale (1.2@14 / 1.25@16), rem, clamp, шрифт ачаалалт (≤4 woff2) |
 | [03-spacing-layout.md](03-spacing-layout.md) | 4/8 scale, container (1536/720/1280/65ch), breakpoint, `dvh`, container query |
@@ -20,9 +20,9 @@
 | [11-data-viz.md](11-data-viz.md) | Chart сонголт, KPI tile, `--chart-1…6`, axis, Recharts/ECharts, a11y |
 | [12-landing.md](12-landing.md) | Landing: hero, section хэмнэл, CTA xl, pricing, SEO, Core Web Vitals |
 | [13-checklist.md](13-checklist.md) | Pre-ship шалгах хуудас + dashboard/chart/landing gate + CI автоматжуулалт |
+| [14-defaults.md](14-defaults.md) | **Эхлэх цэг** — муж бүрээс нэг default; бодолгүй хэрэглэх хүснэгт |
 | [15-app-resilience.md](15-app-resilience.md) | 404/403/500, offline, session, 429, stale, z-index/top-layer/scroll-lock, print, SPA route, bottom bar/PWA |
 | [16-ux-writing-mn.md](16-ux-writing-mn.md) | UX бичвэр монголоор: sentence case, товчны үйл үг, дагавар/ICU plural, алдааны томьёо, нэгж |
-| [00-sources.md](00-sources.md) | Бүх эх сурвалж + давамгайллын дүрэм |
 | [references/](references/README.md) | Амтны сан — зорьж буй / зайлсхийх жишиг зургууд |
 
 ## Давамгайлал ба эзэмшил
