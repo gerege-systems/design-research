@@ -51,7 +51,7 @@
 | Viewport өндөр | `dvh` | `svh` header/hero | 03 |
 | Pagination | offset, 25/хуудас, URL `?page=&size=` | >10k мөр → cursor | 10 |
 | Search | debounce 300ms, ≥2 тэмдэгт, URL `?q=` | — | 10 |
-| Chart сан | Энгийн line/bar/area (≤6 series, ≤1,000 цэг): `@gerege/ui` Chart (SVG, token, table fallback) эсвэл Recharts | Нарийн chart → Recharts; >1,000 цэг → ECharts | 11 |
+| Chart сан | Энгийн line/bar/area (≤6 series, ≤1,000 цэг): `@gerege-systems/ui` Chart (SVG, token, table fallback) эсвэл Recharts | Нарийн chart → Recharts; >1,000 цэг → ECharts | 11 |
 | Chart өнгө | `--chart-1…6`, accent биш; ≤6 series | — | 11 |
 | KPI мөр | 4 tile, label 12 / value 28 / delta 12 | — | 11 |
 | Modal өргөн | форм 520px | alert 400, том 720 | 06 |

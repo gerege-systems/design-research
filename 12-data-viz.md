@@ -108,7 +108,7 @@ Dashboard-ын chart нь чимэглэл биш — асуултад хари�
 
 ## Сан (library)
 
-Нэг проектод **нэг л chart сан**. Энгийн line/bar/area-д `@gerege/ui`-ийн Chart (SVG, token-оор өнгө, table fallback, 5 төлөв) хангалттай; түүнээс нарийн (stacked, scatter, brush, tooltip-лог) бол **Recharts** (React, SVG) — chart бүрт ≤1,000 цэг үед; түүнээс дээш (лог, tick data, heatmap) **ECharts** (canvas). d3 зөвхөн custom дүрслэлд, Chart.js-ийг шинэ проектод сонгохгүй. Сангийн default theme-ийг бүү хэрэглэ — өнгө (`--chart-1…6`), font, gridline-ыг semantic token-оос (08-design-tokens.md-г үз).
+Нэг проектод **нэг л chart сан**. Энгийн line/bar/area-д `@gerege-systems/ui`-ийн Chart (SVG, token-оор өнгө, table fallback, 5 төлөв) хангалттай; түүнээс нарийн (stacked, scatter, brush, tooltip-лог) бол **Recharts** (React, SVG) — chart бүрт ≤1,000 цэг үед; түүнээс дээш (лог, tick data, heatmap) **ECharts** (canvas). d3 зөвхөн custom дүрслэлд, Chart.js-ийг шинэ проектод сонгохгүй. Сангийн default theme-ийг бүү хэрэглэ — өнгө (`--chart-1…6`), font, gridline-ыг semantic token-оос (08-design-tokens.md-г үз).
 
 ## Annotation
 

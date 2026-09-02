@@ -53,7 +53,7 @@
 
 ## Хэрэгжүүлэлт
 
-Эдгээр дүрмийг хэрэгжүүлсэн компонентын сан: [`@gerege/ui`](https://github.com/gerege-systems/gerege-ui) — showcase https://ui.gecore.mn. Дүрэм энд, код тэнд; token утгын эх сурвалж `packages/ui/src/styles/theme.css`.
+Эдгээр дүрмийг хэрэгжүүлсэн компонентын сан: [`@gerege-systems/ui`](https://github.com/gerege-systems/gerege-ui) — showcase https://ui.gecore.mn. Дүрэм энд, код тэнд; token утгын эх сурвалж `packages/ui/src/styles/theme.css`.
 
 ## Ашиглах урсгал
 
