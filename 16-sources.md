@@ -13,7 +13,7 @@
 | **W3C Design Tokens Format Module 2025.10** — designtokens.org/TR | Токены JSON формат (object-утгатай `color`/`dimension`), alias, type | 08 |
 | **CSS спецификаци / MDN** — developer.mozilla.org | `clamp`, container query, `color-scheme`, `@starting-style`, OKLCH, logical properties | 02, 03, 05, 01 |
 | **Unicode CLDR / ICU MessageFormat** — cldr.unicode.org | `mn` locale-ийн огноо/тоо/plural өгөгдөл (бий, гэхдээ гаралтын хэв маяг нь тохирохгүй тул fixed format) | 09, 16 |
-| **craftzbay-ui theme.css** — github.com/craftzbay/craftzbay-ui | Token нэр, light/dark бодит утга, motion/z/radius/shadow scale — энэ репогийн тоон эх сурвалж | 08, 14, бүгд |
+| **gerege-ui theme.css** — github.com/gerege-systems/gerege-ui | Token нэр, light/dark бодит утга, motion/z/radius/shadow scale — энэ репогийн тоон эх сурвалж | 08, 14, бүгд |
 
 ## Платформын удирдамж (convention, стандарт биш)
 

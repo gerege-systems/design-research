@@ -1,6 +1,6 @@
 # design-research
 
-Вэб дизайны жишиг, стандарт, практик дүрмүүдийн лавлах репо (Markdown баримтууд). Код байхгүй — зөвхөн баримт. Responsive сайт, SaaS/dashboard UI, landing page-д хамаарна. GitHub Pages: https://craftzbay.github.io/design-research/
+Вэб дизайны жишиг, стандарт, практик дүрмүүдийн лавлах репо (Markdown баримтууд). Код байхгүй — зөвхөн баримт. Responsive сайт, SaaS/dashboard UI, landing page-д хамаарна. GitHub Pages: https://gerege-systems.github.io/design-research/
 
 ## Стек ба бүтэц
 

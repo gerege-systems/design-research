@@ -4,7 +4,7 @@
 
 ## Яагаад
 
-Hex, px утгуудыг код даяар тараавал theme солих, брэнд өөрчлөх боломжгүй болдог. Token = утгын **нэрлэсэн давхарга**; бүх стил token-оор дамжина. Энэ файлын нэр, утга бүр `craftzbay-ui/packages/ui/src/styles/theme.css`-ээс хуулагдсан (2026-08-21) — **эх сурвалж нь theme.css**, зөрвөл theme.css зөв, энд засна.
+Hex, px утгуудыг код даяар тараавал theme солих, брэнд өөрчлөх боломжгүй болдог. Token = утгын **нэрлэсэн давхарга**; бүх стил token-оор дамжина. Энэ файлын нэр, утга бүр `gerege-ui/packages/ui/src/styles/theme.css`-ээс хуулагдсан (2026-08-21) — **эх сурвалж нь theme.css**, зөрвөл theme.css зөв, энд засна.
 
 ## Гурван давхаргын архитектур
 
@@ -16,7 +16,7 @@ Primitive (raw)        →  Semantic                 →  Component (заава�
 
 1. **Primitive** — түүхий утгууд (`--color-neutral-50…950`, `--color-accent-50…950`, `--spacing-*`). Шууд UI-д хэрэглэхгүй.
 2. **Semantic** — утга учиртай нэр: `--background`, `--foreground`, `--border`, `--accent`… **UI бүхэлдээ энэ давхаргаас уншина.**
-3. **Component** — том системд л хэрэгтэй. craftzbay-ui-д байхгүй; жижиг проектод алгас.
+3. **Component** — том системд л хэрэгтэй. gerege-ui-д байхгүй; жижиг проектод алгас.
 
 ## Semantic өнгө — light / dark бодит утгууд
 
@@ -113,7 +113,7 @@ Utility нэр: `bg-success` (solid) · `text-on-success` · `bg-success-soft` �
 - **Pre-paint script** `<head>`-д, stylesheet-ийн дараа, app bundle-аас өмнө; гадаад файл (CSP `unsafe-inline`-гүй):
 
 ```js
-// /theme-init.js — craftzbay-ui apps/site/public
+// /theme-init.js — gerege-ui apps/site/public
 try {
   var stored = localStorage.getItem('theme');
   var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
@@ -176,7 +176,7 @@ Token-ийг CSS-д биш **платформ-хамааралгүй JSON**-д �
 }
 ```
 
-- `$value`, `$type` заавал; `$description`, `$deprecated` (boolean эсвэл шалтгааны string), `$extensions` (reverse-domain түлхүүр: `"com.craftzbay.figma"`) сонголт. Group = `$value`-гүй объект; `$type`-ыг group дээр тавьбал доторх token-ууд өвлөнө.
+- `$value`, `$type` заавал; `$description`, `$deprecated` (boolean эсвэл шалтгааны string), `$extensions` (reverse-domain түлхүүр: `"mn.gecore.figma"`) сонголт. Group = `$value`-гүй объект; `$type`-ыг group дээр тавьбал доторх token-ууд өвлөнө.
 - Alias `{color.accent.600}` = primitive → semantic холбоос файлд өөрт нь шингэнэ.
 - `$type`-ууд: `color`, `dimension`, `fontFamily`, `fontWeight`, `duration`, `cubicBezier`, `number`, `shadow`, `typography`, `border`, `gradient`, `transition` (composite).
 - **Build**: Style Dictionary v4/v5 (DTCG-г шууд уншина) → `tokens.css` (`:root { --accent: … }` + `.dark { … }`), `.ts`, Swift, Kotlin. Tokens Studio (Figma plugin) тэр JSON-ийг Figma variables ↔ git хоёр тийш sync → **Figma ба код нэг эх сурвалжтай**.
@@ -187,7 +187,7 @@ Token-ийг CSS-д биш **платформ-хамааралгүй JSON**-д �
 
 ## Эх сурвалж
 
-- craftzbay-ui — `packages/ui/src/styles/theme.css`, `apps/site/public/theme-init.js`, `packages/ui/docs/PHILOSOPHY.md` — github.com/craftzbay/craftzbay-ui
+- gerege-ui — `packages/ui/src/styles/theme.css`, `apps/site/public/theme-init.js`, `packages/ui/docs/PHILOSOPHY.md` — github.com/gerege-systems/gerege-ui
 - W3C Design Tokens Community Group — Design Tokens Format Module 2025.10 — designtokens.org/TR/drafts/format/ (2026-08-21 шалгасан)
 - Style Dictionary — DTCG support — styledictionary.com
 - Tokens Studio for Figma — docs.tokens.studio

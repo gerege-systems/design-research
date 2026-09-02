@@ -1,6 +1,6 @@
 # Design Research
 
-Вэб дизайны нарийн ширийн жишиг, стандарт, практик дүрмүүдийн нэгдсэн тэмдэглэл. Responsive вэбсайт, SaaS/dashboard UI, landing page-д хамаарна. Тоон утга бүр [00-defaults.md](00-defaults.md) ба `craftzbay-ui` theme.css-тэй ижил.
+Вэб дизайны нарийн ширийн жишиг, стандарт, практик дүрмүүдийн нэгдсэн тэмдэглэл. Responsive вэбсайт, SaaS/dashboard UI, landing page-д хамаарна. Тоон утга бүр [00-defaults.md](00-defaults.md) ба `gerege-ui` theme.css-тэй ижил.
 
 ## Агуулга
 
@@ -29,7 +29,7 @@
 
 1. **Pattern файл (11 dashboard, 12 data-viz, 13 landing) өөрийн домэйнд суурь файл (01–08)-ыг дарна.**
 2. **Сэдэв бүр нэг л эзэн файлтай**; бусад файл холбоос өгнө, давтахгүй. Компонентын анатоми = 06; dashboard-ын зан төлөв (search, pagination, confirmation, keyboard) = 10; формат (огноо/₮/утас) = 09; бичвэр = 16; token утга = 08.
-3. Тоо зөрвөл: `craftzbay-ui` theme.css = 00-defaults = энэ README > бусад файл. Зөрүү олдвол эзэн файлыг засна.
+3. Тоо зөрвөл: `gerege-ui` theme.css = 00-defaults = энэ README > бусад файл. Зөрүү олдвол эзэн файлыг засна.
 
 ## Товч дүрмүүд (cheat sheet)
 
@@ -53,7 +53,7 @@
 
 ## Хэрэгжүүлэлт
 
-Эдгээр дүрмийг хэрэгжүүлсэн компонентын сан: [`@craftzbay/ui`](https://github.com/craftzbay/craftzbay-ui) — showcase https://ui.gecore.mn. Дүрэм энд, код тэнд; token утгын эх сурвалж `packages/ui/src/styles/theme.css`.
+Эдгээр дүрмийг хэрэгжүүлсэн компонентын сан: [`@gerege/ui`](https://github.com/gerege-systems/gerege-ui) — showcase https://ui.gecore.mn. Дүрэм энд, код тэнд; token утгын эх сурвалж `packages/ui/src/styles/theme.css`.
 
 ## Ашиглах урсгал
 

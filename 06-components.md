@@ -13,7 +13,7 @@
 
 ## Товч (Button)
 
-- **Иерархи 3 түвшин**: primary (accent fill) · secondary (outline/ghost) · tertiary (text-only). Нэг view-д primary **нэг л байх** ёстой. craftzbay-ui-ийн default variant `primary` хэвээр (солибол breaking) — тиймээс бусад товчинд `variant="secondary"`-г **ил бич**.
+- **Иерархи 3 түвшин**: primary (accent fill) · secondary (outline/ghost) · tertiary (text-only). Нэг view-д primary **нэг л байх** ёстой. gerege-ui-ийн default variant `primary` хэвээр (солибол breaking) — тиймээс бусад товчинд `variant="secondary"`-г **ил бич**.
 - Хэмжээ (өндөр): **sm 32 / md 36 / lg 40 / xl 44**. Default md; compact dashboard sm; xl = marketing CTA, touch-first.
 - Padding: хэвтээ нь босоогоосоо ~2 дахин (md: 8px 16px).
 - Төлөвүүд бүгд байх: default / hover / active / focus-visible / disabled / loading.
