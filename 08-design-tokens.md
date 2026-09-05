@@ -4,7 +4,7 @@
 
 ## Яагаад
 
-Hex, px утгуудыг код даяар тараавал theme солих, брэнд өөрчлөх боломжгүй болдог. Token = утгын **нэрлэсэн давхарга**; бүх стил token-оор дамжина. Энэ файлын нэр, утга бүр `gerege-ui/packages/ui/src/styles/theme.css`-ээс хуулагдсан (2026-08-21) — **эх сурвалж нь theme.css**, зөрвөл theme.css зөв, энд засна.
+Hex, px утгуудыг код даяар тараавал theme солих, брэнд өөрчлөх боломжгүй болдог. Token = утгын **нэрлэсэн давхарга**; бүх стил token-оор дамжина. Энэ файлын нэр, утга бүр `gerege-ui/packages/ui/src/styles/theme.css`-ээс хуулагдсан (2026-09-05, gerege-ui 0.12.4) — **эх сурвалж нь theme.css**, зөрвөл theme.css зөв, энд засна.
 
 ## Гурван давхаргын архитектур
 
@@ -125,7 +125,7 @@ try {
 ```
 
 - `system` төлөвт `matchMedia(...).addEventListener('change', …)` сонсож class-ыг амьд шинэчил.
-- Accent preset (`data-accent="blue|violet|emerald|rose|amber"`) зөвхөн accent ramp-ийг сольдог; neutral, статус өнгө хуваалцагдана. Шинэ брэнд = шинэ preset блок, компонент код өөрчлөгдөхгүй.
+- Accent preset (`data-accent="blue|violet|emerald|rose|amber"`) зөвхөн `--accent`, `--accent-subtle`, `--accent-subtle-foreground`, `--ring`-ийг сольдог (light + dark хос); hover/active нь `--accent`-ээс `color-mix`-ээр гардаг тул preset тэдгээрийг бичдэггүй (0.12.4-өөс `--color-accent-700/800`-г ч бичихээ больсон). Neutral, статус өнгө хуваалцагдана. Шинэ брэнд = шинэ preset блок, компонент код өөрчлөгдөхгүй.
 - Компонент код theme мэдэхгүй — зөвхөн semantic token. Dark-д: цэвэр хар биш neutral-950; accent-600 → accent-400; shadow-ийн оронд surface шат (04-visual-details.md).
 
 ## Tailwind-тай хэрхэн зохицох
@@ -146,7 +146,7 @@ Raw token `@theme`-д, semantic нь `:root`/`.dark`-д энгийн custom prop
 1. Компонент дотор hex/px шууд бичихгүй — заавал token.
 2. Token нэр нь **юунд** хэрэглэгдэхийг хэлнэ, **ямар өнгө** болохыг биш (`--color-blue` ✗, `--accent` ✓).
 3. Шинэ token нэмэхээсээ өмнө байгаагаа эргэж хар — token-ийн тоо өсөх нь системийн үнэ цэнийг бууруулдаг.
-4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (15-checklist.md → contrast lint).
+4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (15-checklist.md → contrast lint). Accent бүр (preset ч, custom ч) гурван хосыг 4.5:1-д барина — `accent-foreground` × `accent`, `accent` × `background`, `accent-subtle-foreground` × `accent-subtle`; жагсаалт нь `gerege-ui/packages/ui/src/lib/accent-pairs.ts`-д нэг газар, сангийн token тест ба showcase-ийн theme editor хоёулаа тэндээс уншина.
 
 ## W3C DTCG формат ба tooling
 
