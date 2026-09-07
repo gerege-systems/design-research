@@ -40,6 +40,7 @@ Tailwind utility нэр хаалтад (`@theme inline`-аар холбогдс�
 | `--accent-subtle` (`bg-accent-soft`) | `hsl(232 100% 97%)` | `hsl(238 50% 16%)` | Сонгогдсон мөр, soft badge |
 | `--accent-subtle-foreground` | `hsl(238 48% 40%)` | `hsl(234 71% 78%)` | Soft фон дээрх текст |
 | `--accent-hover` / `--accent-active` | `color-mix(in oklab, var(--accent) 88%/78%, black)` | `… white)` | Товчны hover/active — шинэ hex биш |
+| `--secondary` / `--secondary-hover` / `--secondary-active` | `hsl(214 32% 91%)` / `hsl(213 27% 84%)` / `hsl(215 20% 76%)` | `hsl(217 33% 17%)` / `hsl(215 25% 27%)` / `hsl(215 20% 33%)` | Дүүргэсэн хоёрдогч товч. **Хүрээгүй** — дүүргэлт нь өөрөө хэлбэр; хүрээ нь `outline` вариантынх |
 | `--surface-hover` / `--surface-active` | `hsl(214 32% 91%)` / `hsl(213 27% 84%)` | `hsl(217 33% 17%)` / `hsl(215 25% 27%)` | Мөр, menu item hover |
 | `--overlay` | `hsl(229 50% 6% / 0.6)` | `hsl(229 50% 6% / 0.7)` | Modal backdrop |
 | `--tooltip` / `--tooltip-foreground` | `hsl(222 47% 11%)` / `hsl(210 40% 98%)` | урвуу | Tooltip (inverted) |
@@ -146,6 +147,18 @@ Raw token `@theme`-д, semantic нь `:root`/`.dark`-д энгийн custom prop
 1. Компонент дотор hex/px шууд бичихгүй — заавал token.
 2. Token нэр нь **юунд** хэрэглэгдэхийг хэлнэ, **ямар өнгө** болохыг биш (`--color-blue` ✗, `--accent` ✓).
 3. Шинэ token нэмэхээсээ өмнө байгаагаа эргэж хар — token-ийн тоо өсөх нь системийн үнэ цэнийг бууруулдаг.
+5. **Хувьсагчийн нэр ≠ утилитын нэр.** `@theme inline` нь `--color-*` гэж зарлагдсан
+   нэрээр л утилит үүсгэдэг тул семантик хувьсагчийн нэрээр класс бичихэд **чимээгүй юу ч
+   үүсэхгүй** — текст өв залгамжилсан өнгөөрөө үлдэж, accent дээр бараан бичвэр гарна.
+   Тохирох хүснэгт:
+
+   | CSS хувьсагч | Утилит |
+   |---|---|
+   | `--accent-foreground` | `text-on-accent` (0.13.2-оос `text-accent-foreground` мөн ажиллана) |
+   | `--accent-subtle-foreground` | `text-on-accent-soft` (мөн `text-accent-subtle-foreground`) |
+   | `--on-success` / `--on-warning` / `--on-danger` / `--on-info` | `text-on-success` … |
+   | `--secondary` | `bg-secondary`, `hover:bg-secondary-hover` |
+
 4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (15-checklist.md → contrast lint). Accent бүр (preset ч, custom ч) гурван хосыг 4.5:1-д барина — `accent-foreground` × `accent`, `accent` × `background`, `accent-subtle-foreground` × `accent-subtle`; жагсаалт нь `gerege-ui/packages/ui/src/lib/accent-pairs.ts`-д нэг газар, сангийн token тест ба showcase-ийн theme editor хоёулаа тэндээс уншина.
 
 ## W3C DTCG формат ба tooling
