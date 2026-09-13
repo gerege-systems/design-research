@@ -46,7 +46,7 @@ Tailwind utility нэр хаалтад (`@theme inline`-аар холбогдс�
 | `--tooltip` / `--tooltip-foreground` | `hsl(222 47% 11%)` / `hsl(210 40% 98%)` | урвуу | Tooltip (inverted) |
 | `--ring` | `hsl(238 55% 58%)` (accent-500) | `hsl(238 60% 67%)` (accent-400) | Focus ring |
 | `--ring-offset` | `hsl(0 0% 100%)` | `hsl(229 50% 6%)` | Давхар ring-ийн дотоод давхарга |
-| `--selection` / `--selection-foreground` | `hsl(232 100% 94%)` / `hsl(238 48% 40%)` | `hsl(238 43% 32%)` / `hsl(232 100% 97%)` | `::selection` |
+| `--selection` / `--selection-foreground` | `var(--accent-subtle)` / `var(--accent-subtle-foreground)` | `var(--accent-subtle)` / `var(--accent-subtle-foreground)` | `::selection` — accent-ыг дагана, preset дор indigo үлдэхгүй |
 | `--chart-1…6` | `hsl(217 70% 50%)`, `hsl(162 66% 29%)`, `hsl(38 92% 40%)`, `hsl(0 72% 45%)`, `hsl(215 16% 47%)`, `hsl(262 52% 55%)` | `hsl(217 80% 68%)`, `hsl(162 60% 55%)`, `hsl(38 92% 60%)`, `hsl(0 80% 68%)`, `hsl(215 20% 65%)`, `hsl(262 70% 75%)` | Categorical series — chart-1 нь accent **биш** (12-data-viz.md) |
 
 ### Статусын 4 шаттай мини scale
@@ -58,7 +58,7 @@ Tailwind utility нэр хаалтад (`@theme inline`-аар холбогдс�
 | success | `hsl(152 76% 96%)` / `hsl(152 64% 80%)` / `hsl(163 70% 26%)` / `hsl(162 66% 29%)` / цагаан | `hsl(165 80% 8%)` / `hsl(163 70% 18%)` / `hsl(154 60% 64%)` / `hsl(157 55% 50%)` / `hsl(229 50% 6%)` |
 | warning | `hsl(48 100% 96%)` / `hsl(45 95% 78%)` / `hsl(23 75% 33%)` / `hsl(26 80% 40%)` / цагаан | `hsl(20 60% 10%)` / `hsl(22 70% 26%)` / `hsl(40 92% 65%)` / `hsl(35 90% 56%)` / `hsl(229 50% 6%)` |
 | danger | `hsl(0 86% 97%)` / `hsl(0 96% 89%)` / `hsl(0 74% 42%)` / `hsl(0 72% 51%)` / цагаан | `hsl(0 75% 12%)` / `hsl(0 70% 35%)` / `hsl(0 91% 71%)` / `hsl(0 84% 60%)` / `hsl(229 50% 6%)` |
-| info | `hsl(232 100% 97%)` / `hsl(233 79% 87%)` / `hsl(238 48% 40%)` / `hsl(238 50% 49%)` / цагаан | `hsl(238 50% 16%)` / `hsl(238 43% 32%)` / `hsl(234 71% 78%)` / `hsl(238 60% 67%)` / `hsl(229 50% 6%)` |
+| info | `var(--accent-subtle)` / `hsl(233 79% 87%)` / `var(--accent-subtle-foreground)` / `var(--accent)` / `var(--accent-foreground)` | `var(--accent-subtle)` / `hsl(238 43% 32%)` / `var(--accent-subtle-foreground)` / `var(--accent)` / `var(--accent-foreground)` |
 
 Utility нэр: `bg-success` (solid) · `text-on-success` · `bg-success-soft` · `text-success` · `border-success`. `--danger-hover`/`--danger-active` нь `--accent-hover`-той ижил `color-mix` дүрмээр.
 
@@ -159,7 +159,7 @@ Raw token `@theme`-д, semantic нь `:root`/`.dark`-д энгийн custom prop
    | `--on-success` / `--on-warning` / `--on-danger` / `--on-info` | `text-on-success` … |
    | `--secondary` | `bg-secondary`, `hover:bg-secondary-hover` |
 
-4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (15-checklist.md → contrast lint). Accent бүр (preset ч, custom ч) гурван хосыг 4.5:1-д барина — `accent-foreground` × `accent`, `accent` × `background`, `accent-subtle-foreground` × `accent-subtle`; жагсаалт нь `gerege-ui/packages/ui/src/lib/accent-pairs.ts`-д нэг газар, сангийн token тест ба showcase-ийн theme editor хоёулаа тэндээс уншина.
+4. Контраст нь token-ийн хариуцлага: semantic хос бүр (`foreground-subtle` × `background-muted`, `border-input` × `background`, `on-*` × `*-solid`) theme.css-ийн толгойд бичсэн ratio-тай; утга солиход ratio-г дахин тооц (15-checklist.md → contrast lint). Accent бүр (preset ч, custom ч) таван хосыг 4.5:1-д барина — `accent-foreground` × `accent`, `accent` × `background`, `accent` × `background-muted`, `accent-subtle-foreground` × `accent-subtle`, `accent` × `accent-subtle`; жагсаалт нь `gerege-ui/packages/ui/src/lib/accent-pairs.ts`-д нэг газар, сангийн token тест ба showcase-ийн theme editor хоёулаа тэндээс уншина.
 
 ## W3C DTCG формат ба tooling
 
