@@ -41,7 +41,7 @@ Tailwind utility нэр хаалтад (`@theme inline`-аар холбогдс�
 | `--accent-subtle-foreground` | `hsl(238 48% 40%)` | `hsl(234 71% 78%)` | Soft фон дээрх текст |
 | `--accent-hover` / `--accent-active` | `color-mix(in oklab, var(--accent) 88%/78%, black)` | `… white)` | Товчны hover/active — шинэ hex биш |
 | `--secondary` / `--secondary-hover` / `--secondary-active` | `hsl(214 32% 91%)` / `hsl(213 27% 84%)` / `hsl(215 20% 76%)` | `hsl(217 33% 17%)` / `hsl(215 25% 27%)` / `hsl(215 20% 33%)` | Дүүргэсэн хоёрдогч товч. **Хүрээгүй** — дүүргэлт нь өөрөө хэлбэр; хүрээ нь `outline` вариантынх |
-| `--surface-hover` / `--surface-active` | `hsl(214 32% 91%)` / `hsl(213 27% 84%)` | `hsl(217 33% 17%)` / `hsl(215 25% 27%)` | Мөр, menu item hover |
+| `--surface-hover` | `hsl(214 32% 91%)` | `hsl(217 33% 17%)` | Мөр, menu item hover (`--surface-active` 0.16.0-д хасагдсан — хэрэглээгүй байсан) |
 | `--overlay` | `hsl(229 50% 6% / 0.6)` | `hsl(229 50% 6% / 0.7)` | Modal backdrop |
 | `--tooltip` / `--tooltip-foreground` | `hsl(222 47% 11%)` / `hsl(210 40% 98%)` | урвуу | Tooltip (inverted) |
 | `--ring` | `hsl(238 55% 58%)` (accent-500) | `hsl(238 60% 67%)` (accent-400) | Focus ring |
