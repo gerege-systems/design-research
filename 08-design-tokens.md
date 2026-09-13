@@ -32,7 +32,7 @@ Tailwind utility нэр хаалтад (`@theme inline`-аар холбогдс�
 | `--foreground-subtle` | `hsl(215 16% 45%)` | `hsl(215 20% 65%)` | Caption, placeholder (≥4.5:1 background-muted дээр ч) |
 | `--border` | `hsl(214 32% 91%)` | `hsl(217 33% 17%)` | Divider, card border (чимэглэл) |
 | `--border-strong` | `hsl(213 27% 84%)` | `hsl(215 25% 27%)` | Тод хил |
-| `--border-input` | `hsl(215 16% 55%)` | `hsl(215 16% 45%)` | **Бүх interactive control-ийн хил** — `background` дээр 3.55:1 / 3.88:1, `background-muted` дээр ч 3.24 / 3.28 (WCAG 1.4.11 бүх фон дээр) |
+| `--border-input` | `hsl(215 16% 82%)` | `hsl(215 16% 30%)` | **Бүх interactive control-ийн хил** — зөөлөн (shadcn маяг): `background` дээр 1.55:1 / 2.21:1, `background-muted` дээр 1.42 / 1.86. 2026-09-13-ны удирдлагын шийдвэрээр WCAG 1.4.11-ийн 3:1-ээс доош; `prefers-contrast: more` үед 55% / 45% (3:1) руу буцна |
 | `--card` / `--card-foreground` | `hsl(0 0% 100%)` / `hsl(222 47% 11%)` | `hsl(222 47% 11%)` / `hsl(210 40% 98%)` | Card (dark-д background-subtle-аас нэг шат дээр) |
 | `--popover` / `--popover-foreground` | card-тай ижил | card-тай ижил | Dropdown, popover |
 | `--accent` (`bg-accent`) | `hsl(238 50% 49%)` (accent-600) | `hsl(238 60% 67%)` (accent-400) | Primary товч, линк, идэвхтэй төлөв (10%) |

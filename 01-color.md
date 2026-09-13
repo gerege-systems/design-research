@@ -37,7 +37,7 @@ Mobile дээр 30%-ийн давхарга (sidebar, panel) багасаж 60% 
 - Энгийн текст (<24px): фонтойгоо **≥4.5:1** (WCAG AA)
 - Том текст (≥24px, эсвэл ≥18.7px bold): **≥3:1**
 - Accent өнгөн дээрх цагаан текст ихэвчлэн энд унадаг — Tailwind-ийн 500 биш **600**-г товчны фон болгох нь аюулгүй.
-- UI компонентын хил (input border, icon): non-text contrast **≥3:1**.
+- UI компонентын хил (input border, icon): non-text contrast **≥3:1**. Gerege-ийн form control-ийн хил зориуд зөөлөн — үл хамаарах зүйлийг 04-visual-details.md-ээс үз.
 
 ## Dark mode
 

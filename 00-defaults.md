@@ -29,7 +29,7 @@
 | Breakpoints | 640 / 768 / 1024 / 1280 / 1536 | контентоор нэм | 03 |
 | Radius | товч/input 6 · card 8 · modal 12 · pill full | sm 4 badge | 04 |
 | Shadow | байхгүй (border 1px) | хөвөгч: dropdown md, modal/drawer lg; xl зөвхөн том marketing overlay | 04 |
-| Border өнгө | `--border`; interactive control → `--border-input` (≥3:1) | — | 04 / 08 |
+| Border өнгө | `--border`; interactive control → `--border-input` (зөөлөн ~1.5:1; prefers-contrast дээр ≥3:1) | — | 04 / 08 |
 | Icon | lucide, 16px @ 14px текст, stroke 2 | 20px @ 16–18px текст, 24 гарчиг | 04 |
 | Accent | 1 hue, C ≤0.2; 60-30-10; accent-fill view-д 1 | — | 01 |
 | Contrast | текст 4.5:1; UI/border/icon 3:1 бүх фон дээр | — | 07 |

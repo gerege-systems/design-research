@@ -18,7 +18,7 @@
 ## Өнгө & contrast
 
 - [ ] Энгийн текст фонтойгоо ≥4.5:1 (01-color.md, 07-accessibility.md)
-- [ ] Том текст, icon, input border (`--border-input`) ≥3:1 — **бүх фон дээр** (background, background-muted, card) (07-accessibility.md)
+- [ ] Том текст, icon ≥3:1 — **бүх фон дээр** (background, background-muted, card); `--border-input` зориуд зөөлөн, харин `prefers-contrast: more` дээр ≥3:1 (07-accessibility.md)
 - [ ] Accent hue 1 л байна; accent-fill элемент view-д 1; chart-д accent биш `--chart-*` (01-color.md, 11)
 - [ ] Статус өнгөөр дангаар биш — icon эсвэл label давхар (07-accessibility.md)
 - [ ] Dark mode (`.dark`)-д бүх хуудас нээж үзсэн; hex биш semantic token; `data-theme` байхгүй (08-design-tokens.md)
